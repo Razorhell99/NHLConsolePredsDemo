@@ -11,8 +11,13 @@ namespace NHLConsolePredsDemo
         static void Main(string[] args)
         {
             Games game = new Games();
+            Repository repo = new Repository();
             //game.DisplayGames();
             game.DisplayTeamLast3GamesWithGoalForAndGoalAgainst();
+            //game.FindHighestScoringTeamLast3Games();
+            //game.DisplayLast3MatchForSearchedTeam();
+            //repo.AddGamestoDatabase();
+            //repo.AddMultipleGames();
         }
     }
 }
