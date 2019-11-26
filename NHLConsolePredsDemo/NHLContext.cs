@@ -14,6 +14,7 @@ namespace NHLConsolePredsDemo
 
         public virtual DbSet<Games> Games { get; set; }
         public virtual DbSet<Teams> Teams { get; set; }
+        public virtual DbSet<TempScoreTable> TempScoreTable { get; set; }
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
