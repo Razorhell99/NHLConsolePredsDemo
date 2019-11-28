@@ -8,8 +8,13 @@ namespace NHLConsolePredsDemo
 {
     public class Repository
     {
+
+
+        
         public void AddGamestoDatabase()
         {
+            
+
             using (var context = new NHLContext())
             {
                 //TODO - refactor converting string searched team to teams.ID into a fucntion to be reused elsewhere
@@ -26,6 +31,7 @@ namespace NHLConsolePredsDemo
                 var awayTeamID = from t in context.Teams
                                  where t.TeamName == awayTeam
                                  select t.ID;
+
                 Console.WriteLine("Enter Home Score : ");
                 int homeScore = int.Parse(Console.ReadLine());
                 Console.WriteLine("Enter Away Score : ");
@@ -59,6 +65,21 @@ namespace NHLConsolePredsDemo
             while (answer == "yes");
         }
 
+        public List<Games> DisplayLast3MatchForSearchedTeam(int searchedTeam)
+        {
+            using (var context = new NHLContext())
+            {
+                int searchedTeamID = searchedTeam;
+                //int goalScored = 0;
+                //int goalAllowed = 0;
+                var query = context.Games.Where(g => g.AwayTeamID.Equals(searchedTeamID) || g.HomeTeamID.Equals(searchedTeamID))
+                    .OrderByDescending(g => g.GameDate)
+                    .Take(3);
 
+                return query.ToList();
+
+
+            }
+        }
     }
 }

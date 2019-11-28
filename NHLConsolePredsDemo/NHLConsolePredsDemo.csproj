@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Games.cs" />
+    <Compile Include="GamesRepository.cs" />
     <Compile Include="Migrations\201911130400410_InitialModel.cs" />
     <Compile Include="Migrations\201911130400410_InitialModel.Designer.cs">
       <DependentUpon>201911130400410_InitialModel.cs</DependentUpon>
@@ -84,6 +85,10 @@
     <Compile Include="Migrations\201911241834195_nullvalues.cs" />
     <Compile Include="Migrations\201911241834195_nullvalues.Designer.cs">
       <DependentUpon>201911241834195_nullvalues.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201911280402098_getridOfTempTableStep1.cs" />
+    <Compile Include="Migrations\201911280402098_getridOfTempTableStep1.Designer.cs">
+      <DependentUpon>201911280402098_getridOfTempTableStep1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="NHLContext.cs" />
@@ -123,6 +128,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201911241834195_nullvalues.resx">
       <DependentUpon>201911241834195_nullvalues.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201911280402098_getridOfTempTableStep1.resx">
+      <DependentUpon>201911280402098_getridOfTempTableStep1.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
