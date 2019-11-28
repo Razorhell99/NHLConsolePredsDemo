@@ -15,11 +15,17 @@ namespace NHLConsolePredsDemo
             Games1 = new HashSet<Games>();
         }
 
+        public void TestMethod()
+        {
+        }
+
         public int ID { get; set; }
 
         [Required]
         [StringLength(25)]
         public string TeamName { get; set; }
+        public int? GoalScored { get; set; }
+        public int? GoalAllowed { get; set; }
 
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Games> Games { get; set; }
